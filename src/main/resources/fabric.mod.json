@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "thunderstormsarmor",
+	"version": "${version}",
+	"name": "Thunderstorm's Armor",
+	"description": "This Mod adds copper tools and armor - Watch out for thunderstorms",
+	"authors": [
+		"Senex_"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/thunderstormsarmor/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.senexmc.thunderstormsarmor.ThunderstormsArmor"
+		],
+		"fabric-datagen": [
+			"net.senexmc.thunderstormsarmor.ThunderstormsArmorDataGenerator"
+		]
+	},
+	"mixins": [
+		"thunderstormsarmor.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

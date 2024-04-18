@@ -1,0 +1,14 @@
+{
+  "item.thunderstormsarmor.copper_helmet": "Copper Helmet",
+  "item.thunderstormsarmor.copper_chestplate": "Copper Chestplate",
+  "item.thunderstormsarmor.copper_leggings": "Copper Leggings",
+  "item.thunderstormsarmor.copper_boots": "Copper Boots",
+
+  "item.thunderstormsarmor.copper_axe": "Copper Axe",
+  "item.thunderstormsarmor.copper_hoe": "Copper Hoe",
+  "item.thunderstormsarmor.copper_pickaxe": "Copper Pickaxe",
+  "item.thunderstormsarmor.copper_shovel": "Copper Shovel",
+  "item.thunderstormsarmor.copper_sword": "Copper Sword",
+
+  "itemgroup.copper": "Thunderstorm's Armor"
+}
