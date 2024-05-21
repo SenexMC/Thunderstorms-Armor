@@ -8,6 +8,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -26,8 +27,9 @@ public class ThunderEvent {
         ServerTickEvents.END_SERVER_TICK.register(server -> server.getPlayerManager().getPlayerList().forEach(player -> {
             ServerWorld world = player.getServerWorld();
             boolean isThundering = world.isThundering();
+            BlockPos pos = player.getBlockPos().up();
             tickCounter++;
-            if (tickCounter >= nextStrikeTime && hasCopper(player) && isThundering) {
+            if (tickCounter >= nextStrikeTime && hasCopper(player) && isThundering && isOutsideOrUnderTree(player, world, pos)) {
                 strikePlayerWithLightning(world, player);
                 nextStrikeTime = tickCounter + getRandomInterval(); // Reset the counter with a new random interval
             }
@@ -68,6 +70,10 @@ public class ThunderEvent {
             return material == ModArmorMaterials.COPPER;
         }
         return false;
+    }
+    private static boolean isOutsideOrUnderTree(PlayerEntity player, ServerWorld world, BlockPos pos) {
+        BlockPos playerPos = player.getBlockPos();
+        return player.getWorld().isSkyVisible(playerPos) || world.getBlockState(pos).isIn(BlockTags.LEAVES);
     }
 
     private static int getRandomInterval() {
