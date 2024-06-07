@@ -1,3 +1,4 @@
+![Thunderstorm's Armor](https://cdn.modrinth.com/data/cached_images/da90a198036e7f0ae6f53ed362afc5278ed49e16.png)
 # Thunderstorm's Armor
 Thunderstorm's Armor is a Minecraft mod that introduces dynamic thunderstorms and lightning strikes to your Minecraft world, providing an electrifying new gameplay experience. With Thunderstorm's Armor, you'll face the thrill of the storm as you navigate the dangers and opportunities that come with thunderous weather.
 ## Features
